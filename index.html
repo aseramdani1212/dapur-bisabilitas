@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174e3a">
+  <meta name="description" content="Dapur Bisa Bilitas adalah pendamping memasak inklusif untuk membantu pengguna memasak secara mandiri.">
+
+  <title>Dapur Bisa Bilitas | Memasak Mandiri</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="#beranda" class="brand" aria-label="Dapur Bisa Bilitas">
+        <span class="brand-icon" aria-hidden="true">DB</span>
+        <span>Dapur <strong>Bisa Bilitas</strong></span>
+      </a>
+
+      <nav aria-label="Navigasi utama">
+        <a href="#resep">Resep</a>
+        <a href="#peta">Peta Dapur</a>
+        <a href="#memasak">Mode Memasak</a>
+        <a href="#aksesibilitas">Aksesibilitas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten">
+
+    <section class="hero container" id="beranda">
+      <div class="hero-content">
+        <span class="eyebrow">PENDAMPING DAPUR INKLUSIF</span>
+
+        <h1>Memasak mandiri dimulai dari informasi yang bisa diakses.</h1>
+
+        <p>
+          Kenali lokasi peralatan, pahami petunjuk nonvisual,
+          periksa kesiapan dapur, dan ikuti proses memasak
+          langkah demi langkah.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#resep" class="btn btn-primary">Jelajahi Resep</a>
+          <button type="button" class="btn btn-secondary" id="welcome">
+            Dengarkan Pengenalan
+          </button>
+        </div>
+
+        <p id="connection" role="status" class="status">
+          Memeriksa koneksi...
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="principle">
+          <span>01</span>
+          <div>
+            <h2>Kenali dapur</h2>
+            <p>Simpan lokasi bahan dan peralatan.</p>
+          </div>
+        </div>
+
+        <div class="principle">
+          <span>02</span>
+          <div>
+            <h2>Pahami proses</h2>
+            <p>Ikuti panduan memasak nonvisual.</p>
+          </div>
+        </div>
+
+        <div class="principle">
+          <span>03</span>
+          <div>
+            <h2>Utamakan keselamatan</h2>
+            <p>Periksa kesiapan sebelum memasak.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container safety-notice" aria-label="Peringatan keselamatan">
+      <h2>Informasi keselamatan</h2>
+      <p>
+        Petunjuk suara, aroma, tekstur, dan waktu merupakan
+        informasi pendukung, bukan jaminan makanan matang
+        atau dapur aman. Gunakan alat yang sesuai dan ikuti
+        prosedur keamanan pangan.
+      </p>
+    </section>
+
+    <section class="container section" id="resep">
+      <div class="section-heading">
+        <span class="eyebrow">KATALOG MASAKAN</span>
+        <h2>Jelajahi resep</h2>
+        <p>
+          Setiap resep dilengkapi petunjuk nonvisual,
+          bahan, langkah memasak, dan catatan keselamatan.
+        </p>
+      </div>
+
+      <div class="search-area">
+        <div class="field">
+          <label for="search">Cari resep atau bahan</label>
+          <input id="search" type="search"
+            placeholder="Contoh: telur, nasi, sayur">
+        </div>
+
+        <div class="field">
+          <label for="category">Kategori</label>
+          <select id="category">
+            <option value="all">Semua kategori</option>
+            <option value="sarapan">Sarapan</option>
+            <option value="lauk">Lauk</option>
+            <option value="sayur">Sayur dan sup</option>
+            <option value="minuman">Minuman</option>
+          </select>
+        </div>
+
+        <label class="check-label">
+          <input type="checkbox" id="favorite-filter">
+          <span>Hanya favorit</span>
+        </label>
+      </div>
+
+      <div class="recipe-layout">
+        <div class="recipe-list-panel">
+          <h3>Daftar resep</h3>
+          <p id="recipe-count" role="status">Memuat resep...</p>
+          <div id="recipe-list" class="recipe-list"></div>
+        </div>
+
+        <article id="recipe-detail" class="recipe-detail"
+          aria-label="Detail resep">
+          <div class="empty-state">
+            <h3>Belum ada resep dipilih</h3>
+            <p>Pilih resep dari daftar untuk melihat petunjuk memasak.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="memasak">
+      <div class="section-heading">
+        <span class="eyebrow">PANDUAN MEMASAK</span>
+        <h2>Mode Memasak Mandiri</h2>
+        <p>
+          Ikuti satu instruksi pada satu waktu.
+          Pengguna dapat mengulang, mundur, dan melanjutkan langkah.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Pemeriksaan kesiapan dapur</h3>
+        <p>
+          Periksa kondisi dapur secara langsung sebelum memulai.
+        </p>
+
+        <div id="safety-checks" class="check-list">
+          <label class="check-label">
+            <input type="checkbox">
+            <span>Area kerja dan jalur berjalan tidak terhalang.</span>
+          </label>
+
+          <label class="check-label">
+            <input type="checkbox">
+            <span>Lokasi peralatan dan bahan sudah dikenali.</span>
+          </label>
+
+          <label class="check-label">
+            <input type="checkbox">
+            <span>Saya mengetahui cara mematikan kompor.</span>
+          </label>
+
+          <label class="check-label">
+            <input type="checkbox">
+            <span>Tangan dan area peralatan listrik dalam keadaan kering.</span>
+          </label>
+        </div>
+
+        <p id="safety-status" role="status">
+          Lengkapi pemeriksaan sebelum memulai.
+        </p>
+      </div>
+
+      <div class="panel cooking-panel">
+        <div class="cooking-heading">
+          <div>
+            <span class="eyebrow">RESEP TERPILIH</span>
+            <h3 id="cooking-name">Belum ada resep</h3>
+          </div>
+
+          <span id="step-count">Belum dimulai</span>
+        </div>
+
+        <div class="progress">
+          <div id="progress-fill"></div>
+        </div>
+
+        <div id="current-step" class="current-step" aria-live="polite">
+          Pilih resep terlebih dahulu.
+        </div>
+
+        <div class="button-group">
+          <button id="previous" class="btn btn-secondary" disabled>
+            Sebelumnya
+          </button>
+
+          <button id="repeat" class="btn btn-secondary" disabled>
+            Ulangi
+          </button>
+
+          <button id="next" class="btn btn-primary" disabled>
+            Berikutnya
+          </button>
+
+          <button id="stop" class="btn btn-danger" disabled>
+            Akhiri
+          </button>
+        </div>
+
+        <div class="voice-panel">
+          <label class="check-label">
+            <input type="checkbox" id="speech">
+            <span>Aktifkan narasi suara tambahan</span>
+          </label>
+
+          <button id="voice-command" class="btn btn-secondary">
+            Aktifkan perintah suara
+          </button>
+
+          <p id="voice-status" role="status">
+            Perintah suara membutuhkan izin mikrofon
+            dan dukungan browser.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section utility-grid">
+
+      <article class="panel">
+        <span class="eyebrow">PENGINGAT WAKTU</span>
+        <h2>Timer memasak</h2>
+
+        <p>
+          Timer membantu mengingatkan durasi,
+          bukan memastikan makanan matang.
+        </p>
+
+        <div id="timer-display" class="timer-display"
+          role="timer" aria-label="Sisa waktu">
+          00:00
+        </div>
+
+        <div class="timer-inputs">
+          <div class="field">
+            <label for="minutes">Menit</label>
+            <input type="number" id="minutes"
+              min="0" max="180" value="1">
+          </div>
+
+          <div class="field">
+            <label for="seconds">Detik</label>
+            <input type="number" id="seconds"
+              min="0" max="59" value="0">
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button id="timer-start" class="btn btn-primary">
+            Mulai timer
+          </button>
+
+          <button id="timer-stop" class="btn btn-secondary" disabled>
+            Hentikan
+          </button>
+        </div>
+
+        <p id="timer-status" role="status">
+          Timer belum berjalan.
+        </p>
+      </article>
+
+      <article class="panel" id="peta">
+        <span class="eyebrow">KENALI RUANG ANDA</span>
+        <h2>Peta Dapur Personal</h2>
+
+        <p>
+          Simpan informasi lokasi bahan dan peralatan
+          agar mudah ditemukan kembali.
+        </p>
+
+        <form id="kitchen-form">
+          <div class="field">
+            <label for="item-name">Nama bahan atau peralatan</label>
+            <input id="item-name" maxlength="60"
+              placeholder="Contoh: Garam" required>
+          </div>
+
+          <div class="field">
+            <label for="item-location">Deskripsi lokasi</label>
+            <input id="item-location" maxlength="140"
+              placeholder="Contoh: Rak kedua sebelah kiri" required>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Simpan lokasi
+          </button>
+        </form>
+
+        <div class="field">
+          <label for="map-search">Cari lokasi</label>
+          <input id="map-search" type="search"
+            placeholder="Cari bahan atau peralatan">
+        </div>
+
+        <p id="map-count" role="status">Belum ada lokasi tersimpan.</p>
+        <ul id="kitchen-list" class="kitchen-list"></ul>
+      </article>
+    </section>
+
+    <section class="container section" id="referensi">
+      <div class="section-heading">
+        <span class="eyebrow">INFORMASI TAMBAHAN</span>
+        <h2>Pusat Referensi</h2>
+        <p>
+          Gunakan sumber tepercaya untuk mempelajari
+          keamanan dan pengolahan pangan.
+        </p>
+      </div>
+
+      <div class="reference-grid">
+        <article class="panel">
+          <h3>BPOM</h3>
+          <p>Informasi keamanan pangan dan pengawasan makanan.</p>
+          <a href="https://www.pom.go.id/"
+            target="_blank" rel="noopener noreferrer">
+            Kunjungi situs BPOM
+          </a>
+        </article>
+
+        <article class="panel">
+          <h3>Kementerian Kesehatan</h3>
+          <p>Informasi kesehatan dan keamanan pangan keluarga.</p>
+          <a href="https://ayosehat.kemkes.go.id/"
+            target="_blank" rel="noopener noreferrer">
+            Kunjungi Ayo Sehat
+          </a>
+        </article>
+
+        <article class="panel">
+          <h3>Google</h3>
+          <p>Telusuri informasi tambahan dari sumber pemerintah.</p>
+          <a href="https://www.google.com/search?q=keamanan+pangan+site%3Agov.id"
+            target="_blank" rel="noopener noreferrer">
+            Cari informasi keamanan pangan
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="aksesibilitas">
+      <div class="section-heading">
+        <span class="eyebrow">PENGATURAN PENGGUNA</span>
+        <h2>Aksesibilitas</h2>
+        <p>Atur tampilan sesuai kebutuhan.</p>
+      </div>
+
+      <div class="panel access-panel">
+        <label class="check-label">
+          <input type="checkbox" id="high-contrast">
+          <span>Aktifkan kontras tinggi</span>
+        </label>
+
+        <label class="check-label">
+          <input type="checkbox" id="large-text">
+          <span>Perbesar ukuran teks</span>
+        </label>
+
+        <label class="check-label">
+          <input type="checkbox" id="reduce-motion">
+          <span>Kurangi animasi</span>
+        </label>
+
+        <p>
+          Narasi suara tambahan dapat dimatikan untuk
+          mencegah suara bertumpuk dengan NVDA atau VoiceOver.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <h2>Dapur Bisa Bilitas</h2>
+      <p>Memasak Mandiri, Mudah, dan Bisa Diakses Semua.</p>
+      <p>Dibuat dan dikembangkan oleh <strong>Ase Muhamad Ramdani</strong>.</p>
+      <p>© 2026 Ase Muhamad Ramdani. Hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <div id="live-region" class="visually-hidden"
+    aria-live="polite" aria-atomic="true"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+{
+  "id": "/",
+  "name": "Dapur Bisa Bilitas",
+  "short_name": "Dapur Bilitas",
+  "description": "Pendamping memasak inklusif untuk kemandirian pengguna tunanetra dan masyarakat umum.",
+  "lang": "id-ID",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f8f2",
+  "theme_color": "#245b43",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
